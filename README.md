@@ -1,37 +1,47 @@
-Gerenciador de Inscrições para Corrida Beneficente
-💻 Sobre o Projeto
-Este projeto é um software de desktop desenvolvido como atividade para a disciplina de Programação Orientada a Objetos (POO). O objetivo é aplicar os conceitos fundamentais de POO para criar um sistema de gerenciamento de inscrições para uma corrida de rua beneficente, organizada por uma ONG de proteção animal.
-O sistema permite cadastrar, visualizar e remover participantes, além de exibir estatísticas em tempo real, como o número total de inscritos e o valor arrecadado com as inscrições.
-✨ Objetivos e Conceitos de POO Aplicados
-O desenvolvimento deste software visou demonstrar o domínio dos seguintes pilares da Programação Orientada a Objetos:
+# **🏃‍♂️ Gerenciador de Inscrições para Corrida Beneficente**
 
-    Abstração: As entidades do mundo real (Pessoa, Participante, Corrida) foram modeladas em classes, abstraindo suas características e comportamentos essenciais. A classe Pessoa foi criada como abstract para representar um conceito genérico que não pode ser instanciado diretamente.
-    Encapsulamento: Todos os atributos das classes de modelo são privados e acessados através de propriedades públicas ({ get; set; }). Isso protege o estado interno dos objetos e garante que o acesso aos dados seja controlado.
-    Herança: A classe Participante herda da classe Pessoa, reutilizando seus atributos (Nome, CPF, Email, Telefone) e estendendo-os com informações específicas da inscrição.
-    Polimorfismo: Embora não explorado em profundidade, a estrutura com herança abre caminho para comportamentos polimórficos, onde diferentes tipos de Pessoa poderiam ser tratados de maneira uniforme.
+![C#](https://img.shields.io/badge/C%23-239120?style=for-the-badge&logo=c-sharp&logoColor=white) ![.NET](https://img.shields.io/badge/.NET-512BD4?style=for-the-badge&logo=.net&logoColor=white) ![WPF](https://img.shields.io/badge/WPF-512BD4?style=for-the-badge&logo=windows&logoColor=white) ![Visual Studio](https://img.shields.io/badge/Visual_Studio-5C2D91?style=for-the-badge&logo=visual-studio&logoColor=white)
 
-🚀 Tecnologias Utilizadas
+---
 
-    Linguagem: C#
-    Framework: .NET
-    Interface Gráfica (GUI): Windows Presentation Foundation (WPF)
-    IDE: Visual Studio
+## **💻 Sobre o Projeto**
+Software de desktop desenvolvido para a disciplina de **Programação Orientada a Objetos (POO)**.  
+Permite **cadastrar, listar e remover participantes** de uma corrida beneficente organizada por uma **ONG de proteção animal**, com **estatísticas em tempo real**.
 
-📂 Estrutura do Projeto
-O projeto foi organizado com uma clara separação de responsabilidades:
+---
 
-    Models/: Contém as classes que representam os dados do sistema (as entidades).
-        Pessoa.cs: Classe base abstrata.
-        Participante.cs: Representa um participante inscrito.
-        Corrida.cs: Representa o evento da corrida.
-    GerenciadorInscricoes.cs: Classe de serviço que centraliza a lógica de negócios (cadastrar, remover, calcular estatísticas), servindo como uma ponte entre a interface e os modelos.
-    MainWindow.xaml / MainWindow.xaml.cs: Camada de apresentação (View e Code-behind), responsável exclusivamente pela interação com o usuário e por delegar as ações ao GerenciadorInscricoes.
+## **✨ Objetivos e Conceitos de POO Aplicados**
+- **Abstração:** Entidades (*Pessoa, Participante, Corrida*) modeladas em classes, abstraindo características essenciais.  
+  `Pessoa` é **abstract**, representando um conceito genérico não instanciável.
+- **Encapsulamento:** Atributos privados acessados via propriedades públicas (`{ get; set; }`) para proteger o estado interno dos objetos.
+- **Herança:** `Participante` herda de `Pessoa`, reutilizando atributos e adicionando informações de inscrição.
+- **Polimorfismo:** Estrutura que permite tratar diferentes tipos de `Pessoa` de forma uniforme.
 
-✨ Funcionalidades
-O software implementa os seguintes requisitos funcionais:
+---
 
-    Cadastro de Participantes: Formulário para inserir Nome, CPF, Email, Telefone e Idade.
-    Seleção de Valor de Inscrição: Permite escolher entre diferentes valores de inscrição/doação.
-    Listagem de Inscritos: Um DataGrid exibe todos os participantes cadastrados com suas informações.
-    Remoção de Participantes: É possível selecionar um participante na lista e removê-lo.
-    Estatísticas em Tempo Real: Exibição do número total de inscritos e do valor total arrecadado, atualizados automaticamente após cada operação.
+## **✨ Funcionalidades**
+- **Cadastro de Participantes:** Nome, CPF, Email, Telefone e Idade  
+- **Seleção de Valor de Inscrição:** Diferentes valores de inscrição/doação  
+- **Listagem de Inscritos:** Exibição em DataGrid  
+- **Remoção de Participantes:** Exclusão direta da lista  
+- **Estatísticas em Tempo Real:** Total de inscritos e valor arrecadado
+
+---
+
+## **🚀 Tecnologias**
+- **Linguagem:** C#  
+- **Framework:** .NET  
+- **GUI:** WPF  
+- **IDE:** Visual Studio  
+
+---
+
+## **📂 Estrutura do Projeto**
+```text
+Models/
+├─ Pessoa.cs               # Classe base abstrata
+├─ Participante.cs         # Representa um participante
+├─ Corrida.cs              # Representa a corrida
+GerenciadorInscricoes.cs   # Lógica de negócios
+MainWindow.xaml / MainWindow.xaml.cs  # Interface e interação com usuário
+
